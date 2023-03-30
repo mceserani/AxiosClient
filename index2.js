@@ -91,7 +91,7 @@ function aggiungiStudente(){
     });
 }
 
-function cancellaStudente(){
+function eliminaStudente(){
     inquirer.prompt([
         {
             type: 'input',
@@ -121,7 +121,7 @@ function cancellaStudente(){
     });
 }
 
-async function main() {
+function main() {
     inquirer.prompt([
         {
             type: 'list',
@@ -145,6 +145,8 @@ async function main() {
     });
 }
 
-main().catch((error) => {
-  console.error('Errore:', error.message);
-});
+try{
+    main();
+} catch (error) {
+    console.error('Errore:', error.message);
+}
